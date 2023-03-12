@@ -1,0 +1,20 @@
+.services-container {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.website-architecture-container,
+.bios-update-container,
+.hardware-installation-container,
+.consultation-container {
+    border: solid;
+    color: black;
+    border-color: black;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}

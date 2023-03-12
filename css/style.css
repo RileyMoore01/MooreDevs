@@ -1,9 +1,28 @@
 /* Entities */
+button {
+    cursor: pointer;
+}
 
+body {
+    max-height: calc(100vh - 150px);
+    height: 100%;
+    /* position: absolute; */
+}
+
+html {
+    max-height: 100vh;
+    height: 100%;
+}
 
  /* ID's */
 #nav-bar {
+    position: fixed;
+    vertical-align: top;
+    top: 0;
+    max-width: 100vw;
+    width: 100%;
     background-color: black;
+    z-index: 900;
 }
 
 #hamburger-icon {
@@ -15,7 +34,46 @@
 .header-title {
     color: white;
 }
+/* --------------------------- */
+.website-query,
+.software-query,
+.consultation-query {
+    max-width: 250px;
+    padding: 30px;
+    width: auto;
+    color: black;
+    text-align: center;
+}
+
+.quries {
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.query-button {
+    color: white;
+    background-color: red;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+/* --------------------------- */
 
 
+.footer {
+    position: fixed;
+    max-width: 100vw;
+    width: 100%;
+    background-color: black;
+    color: white;
+
+    text-align: center;
+    bottom: 0;
+    vertical-align: bottom;
+}
 
 /* Media Queries */

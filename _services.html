@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/uikit.min.css" />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/services.css" />
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
         <script src="js/app.js"></script>
@@ -15,7 +16,9 @@
 <nav id="nav-bar">
     <div uk-grid>
         <div id="hamburger-icon">
-            <button class="uk-button uk-button-default" src="/images/hamburgerIcon.png" style="width:4em; height:4em;"></button>
+            <button type="button" style="width:4em; height:4em;">
+                <img src="/images/hamburgerIcon.png" />
+            </button>
             <div uk-dropdown>
                 <ul class="uk-nav uk-dropdown-nav">
                     <li><a href="_index.html">Home</a></li>
@@ -29,8 +32,34 @@
 </nav>
 
 <body>
+    <div class="services-container">
+        <div class="website-architecture-container">
+            <h3>Website Architecture</h3>
+            <p>We will take your ideas to plan, design, and test your very own websites</p>
+        </div>
     
+        <div class="bios-update-container">
+            <h3>BIOS Update</h3>
+            <p>Update your computers BIOS to prevent future issues and resolve current ones</p>
+        </div>
+    
+        <div class="hardware-installation-container">
+            <h3>Hardware Installation</h3>
+            <p>Install and repair hardware into your personal computer</p>
+        </div>
+    
+        <div class="consultation-container">
+            <h3>Consultation Calls</h3>
+            <p>Talk to a trained professional about any inquiry related to hardware or website development</p>
+        </div>
+    </div>
 </body>
 
+<footer class="footer">
+    <ul class="uk-list">
+        <li>940-453-8300</li>
+        <li>MooreDevs.Co@outlook.com</li>
+    </ul>
+</footer>
 
 </html>

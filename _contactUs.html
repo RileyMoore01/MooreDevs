@@ -16,7 +16,9 @@
 <nav id="nav-bar">
     <div uk-grid>
         <div id="hamburger-icon">
-            <button class="uk-button uk-button-default" src="/images/hamburgerIcon.png" style="width:4em; height:4em;"></button>
+            <button type="button" style="width:4em; height:4em;">
+                <img src="/images/hamburgerIcon.png" />
+            </button>
             <div uk-dropdown>
                 <ul class="uk-nav uk-dropdown-nav">
                     <li><a href="_index.html">Home</a></li>
@@ -29,21 +31,31 @@
     </div>
 </nav>
     
-<form method="post" action="https://formsubmit.co/xrileyxmoorex@outlook.com">
+<form method="post" action="https://formsubmit.co/MooreDevs.Co@outlook.com">
     <div class="contact-container">
         <div class="container-content">
             <h5>Email Address</h5>
-            <input id="input-contact" type="hidden" name="_subject" value="Contact from RileyMoore01.github.io">
             <input id="input-contact" type="email" name="email" required>
+        </div>
+        <div>
+            <h5>Subject</h5>
+            <input id="input-contact" name="_subject"> 
         </div>
         <div class="container-content">
             <input id="input-contact" type="hidden" name="_next" value="" >
         </div>
-        <h5>Subject</h5>
+        <h5>Email Body</h5>
         <textarea id="email-subject" name="name" required></textarea>
         <div class="container-content">
-            <button id="submit" class="uk-button-danger" type="submit">Send</button>
+            <button id="submit" class="query-button" type="submit">Send</button>
         </div>
     </div>
 </form>
+
+<footer class="footer">
+    <ul class="uk-list">
+        <li>940-453-8300</li>
+        <li>MooreDevs.Co@outlook.com</li>
+    </ul>
+</footer>
 </html>
