@@ -1,0 +1,21 @@
+/* Entities */
+
+
+ /* ID's */
+#nav-bar {
+    background-color: black;
+}
+
+#hamburger-icon {
+    padding-left: 80px;
+}
+
+
+/* Classes */
+.header-title {
+    color: white;
+}
+
+
+
+/* Media Queries */
