@@ -68,6 +68,17 @@ html {
     padding: 10px;
 }
 
+/* --------------------------- */
+.about-us-home {
+    max-width: calc(100vw / 2);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
 .dropdown-list {
     background-color: black !important;
 }
@@ -79,10 +90,6 @@ html {
 .non-active {
     color: white !important;
 }
-
-
-/* --------------------------- */
-
 
 .footer {
     position: fixed;
