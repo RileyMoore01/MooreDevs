@@ -20,8 +20,18 @@
     padding: 2rem;
 }
 
-#input-contact {
+#input-email {
     width: 35rem;
+    height: 2rem;
+    text-align: center;
+    border-radius: 25px;
+    border: solid;
+}
+
+#input-subject {
+    width: 35rem;
+    height: 3rem;
+    text-align: center;
     border-radius: 25px;
     border: solid;
 }
@@ -29,7 +39,7 @@
 #email-subject {
     border-radius: 25px;
     border: solid;
-
+    text-align: center;
     width: 40em; 
     height: 20em;
 }
