@@ -16,14 +16,14 @@
 <nav id="nav-bar">
     <div uk-grid>
         <div id="hamburger-icon">
-            <button type="button" style="width:4em; height:4em;">
+            <button id="hamburger-icon" type="button" style="width:4em; height:4em;">
                 <img src="/images/hamburgerIcon.png" />
             </button>
-            <div uk-dropdown>
+            <div class="dropdown-list" uk-dropdown>
                 <ul class="uk-nav uk-dropdown-nav">
-                    <li><a href="_index.html">Home</a></li>
-                    <li><a href="_services.html">Services</a></li>
-                    <li class="uk-active"><a href="#">Contact Us</a></li>
+                    <li><a class="non-active" href="_index.html">Home</a></li>
+                    <li><a class="non-active" href="_services.html">Services</a></li>
+                    <li><a class="active" href="#">Contact Us</a></li>
                 </ul>
             </div>
         </div>

@@ -61,6 +61,19 @@ html {
     padding: 10px;
 }
 
+.dropdown-list {
+    background-color: black !important;
+}
+
+.active {
+    color: greenyellow !important;
+}
+
+.non-active {
+    color: white !important;
+}
+
+
 /* --------------------------- */
 
 
