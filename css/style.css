@@ -55,8 +55,8 @@ html {
 .quries {
     text-align: center;
     position: absolute;
-    top: 20%;
-    left: 50%;
+    top: 30%;
+    left: 52%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
@@ -73,10 +73,15 @@ html {
     max-width: calc(100vw / 2);
     text-align: center;
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+}
+
+.home-icon {
+    width: 70px;
+    height: 70px;
 }
 
 .dropdown-list {
