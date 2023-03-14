@@ -90,22 +90,23 @@ html {
 }
 
 .footer {
-    position: fixed;
     max-width: 100vw;
     width: 100%;
     background-color: black;
     color: white;
-
+    position: fixed;
     text-align: center;
-    bottom: 0;
-    vertical-align: bottom;
+    bottom: 0 !important;
+    vertical-align: bottom !important;
 }
 
 /* ---------------- Media Queries  ----------------*/
 @media only screen and (max-width: 920px) {
     .quries {
+        margin: auto;
+        padding: auto;
+        padding-bottom: 150px;
         overflow: auto;
-        display:grid;
         position: absolute;
         max-width: calc(100vw - 100px);
         top: 75%;
@@ -134,5 +135,16 @@ html {
         width: auto;
         color: black;
         text-align: center;
+    }
+
+    .footer {
+        max-width: 100vw;
+        width: 100%;
+        background-color: black;
+        color: white;
+    
+        text-align: center;
+        bottom: 0;
+        vertical-align: bottom;
     }
 }
