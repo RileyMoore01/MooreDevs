@@ -108,7 +108,7 @@ html {
         display:grid;
         position: absolute;
         max-width: calc(100vw - 100px);
-        top: 75%;
+        top: 85%;
         left: 52%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
