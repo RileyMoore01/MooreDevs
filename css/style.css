@@ -61,13 +61,6 @@ html {
     transform: translate(-50%, -50%);
 }
 
-.query-button {
-    color: white;
-    background-color: red;
-    border-radius: 20px;
-    padding: 10px;
-}
-
 /* --------------------------- */
 .about-us-home {
     max-width: calc(100vw / 2);
