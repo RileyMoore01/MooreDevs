@@ -10,7 +10,7 @@
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
         <script src="js/app.js"></script>
-        <title>Document</title>
+        <title>MooreDevs</title>
     </head>
 
 <nav id="nav-bar">
@@ -27,7 +27,7 @@
                 </ul>
             </div>
         </div>
-        <div><h1 class="header-title">ZenTech</h1></div>
+        <div class="header-company-name"><a href="index.html"><h1 style="color: white;">Moore Devs</h1></a></div>
     </div>
 </nav>
     
@@ -39,7 +39,7 @@
         </div>
         <div>
             <h5>Subject</h5>
-            <select id="input-subject" name="QueryType"> 
+            <select value="QueryType" id="input-subject" name="QueryType"> 
                 <option value="website">Website Development</option>
                 <option value="hardware">Hardware Issues</option>
                 <option value="consultation">Consultation Call</option>
@@ -51,15 +51,15 @@
         <h5>Email Body</h5>
         <textarea id="email-subject" name="name" placeholder="Message" required></textarea>
         <div class="container-content">
-            <button id="submit" class="query-button" type="submit">Send</button>
+            <button id="submit" class="uk-button-danger uk-button" style="border-radius: 25px;" type="submit">Send</button>
         </div>
     </div>
 </form>
 
 <footer class="footer">
-    <ul class="uk-list">
-        <li>940-453-8300</li>
-        <li>MooreDevs.Co@outlook.com</li>
+    <ul class="uk-list" style="padding-top:10px;">
+        <li style="font-size: 20px;">940-453-8300</li>
+        <li style="font-size: 20px;">MooreDevs.Co@outlook.com</li>
     </ul>
 </footer>
 </html>

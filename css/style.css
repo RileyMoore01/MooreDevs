@@ -1,4 +1,4 @@
-/* Entities */
+/* ---------------- Entities ----------------*/
 button {
     cursor: pointer;
 }
@@ -37,11 +37,8 @@ html {
 }
 
 
-/* Classes */
-.header-title {
-    color: white;
-}
-/* --------------------------- */
+/* ---------------- Classes ---------------- */
+
 .website-query,
 .software-query,
 .consultation-query {
@@ -61,7 +58,6 @@ html {
     transform: translate(-50%, -50%);
 }
 
-/* --------------------------- */
 .about-us-home {
     max-width: calc(100vw / 2);
     text-align: center;
@@ -75,6 +71,10 @@ html {
 .home-icon {
     width: 70px;
     height: 70px;
+}
+
+.header-company-name {
+    max-height: 50px;
 }
 
 .dropdown-list {
@@ -101,4 +101,4 @@ html {
     vertical-align: bottom;
 }
 
-/* Media Queries */
+/* ---------------- Media Queries  ----------------*/
