@@ -102,3 +102,37 @@ html {
 }
 
 /* ---------------- Media Queries  ----------------*/
+@media only screen and (max-width: 920px) {
+    .quries {
+        overflow: auto;
+        display:grid;
+        position: absolute;
+        max-width: calc(100vw - 100px);
+        top: 75%;
+        left: 52%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .about-us-home {
+        text-align: center;
+        display: grid;
+        position: relative;
+        /* top: 65%; */
+        left: 50%;
+        bottom: 0;
+        vertical-align: bottom;
+        transform: translate(calc(100vh * 2));
+    }
+
+    .website-query,
+    .software-query,
+    .consultation-query {
+        max-width: calc(100vw - 100px);
+        width: 100%;
+        padding: 30px;
+        width: auto;
+        color: black;
+        text-align: center;
+    }
+}
