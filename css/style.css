@@ -22,7 +22,7 @@ html {
     max-width: 100vw;
     width: 100%;
     background-color: black;
-    z-index: 900;
+    z-index: 950;
 }
 
 #hamburger-div {
@@ -85,13 +85,8 @@ html {
     background-color: black !important;
 }
 
-.active {
-    color: red !important;
-}
-
-.non-active {
-    color: black !important;
-}
+.active { color: red !important; }
+.non-active { color: black !important; }
 
 .footer {
     max-width: 100vw;
@@ -102,6 +97,7 @@ html {
     text-align: center;
     bottom: 0 !important;
     vertical-align: bottom !important;
+    z-index: 950;
 }
 
 
@@ -233,7 +229,7 @@ body {
 
 .navbar .menu-items li {
   margin-bottom: 1.2rem;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 500;
 }
 
