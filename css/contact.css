@@ -1,12 +1,9 @@
 html {
-    overflow: auto;
 }
 
 .contact-container {
-    overflow: auto;
-    /* max-height: calc(100vh - 200px);
-    height: 100%; */
     border-radius: 25px;
+    padding: 2em;
     background-color: white;
     text-align: center;
 
@@ -54,6 +51,22 @@ html {
         border-radius: 25px;
         border: solid;
     }
+
+    #input-email {
+        width: 20rem;
+        height: 2rem;
+        text-align: center;
+        border-radius: 25px;
+        border: solid;
+    }
+
+    #input-subject {
+        width: 20rem;
+        height: 3rem;
+        text-align: center;
+        border-radius: 25px;
+        border: solid;
+    }
     
     #email-subject {
         border-radius: 25px;
@@ -64,15 +77,17 @@ html {
     }
 }
 
-@media only screen and (max-height: 820px) {
+@media only screen and (max-height: 850px) {
     .contact-container {
+        overflow: none !important;
         max-height: calc(100vh - 100px);
+        max-width: 100vw - 100px;
+        width: 100%;
         border-radius: 25px;
         background-color: white;
         text-align: center;
-    
         position: absolute;
-        top: 50%;
+        top: 48%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
