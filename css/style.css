@@ -86,7 +86,7 @@ html {
 }
 
 .active { color: red !important; }
-.non-active { color: black !important; }
+.non-active { color: white !important; }
 
 .footer {
     max-width: 100vw;
@@ -217,7 +217,7 @@ body {
 
 .navbar .menu-items {
   padding-top: 120px;
-  background-color: white;
+  background-color: black;
   height: 100vh;
   width: 100vw;
   transform: translate(-150%);
@@ -252,22 +252,18 @@ body {
 
 .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
   transform: rotate(45deg);
-  background-color: black;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
   transform: scaleY(0);
-  background-color: black;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
   transform: rotate(-45deg);
-  background-color: black;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .logo{
   display: none;
-  background-color: black;
 }
 
 
