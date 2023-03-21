@@ -4,9 +4,7 @@ button {
 }
 
 body {
-    max-height: calc(100vh - 150px);
     height: 100%;
-    /* position: absolute; */
 }
 
 html {
@@ -69,6 +67,8 @@ html {
     top: 65%;
     left: 50%;
     margin-right: -50%;
+    padding-bottom: 50px;
+    padding-top: 0;
     transform: translate(-50%, -50%);
 }
 
