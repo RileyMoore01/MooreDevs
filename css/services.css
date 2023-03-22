@@ -1,6 +1,7 @@
 .services-container {
+    overflow: auto;
     position: absolute;
-    top: 48%;
+    top: calc(100vh - (100vh - 30rem));
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -10,15 +11,38 @@
 .bios-update-container,
 .hardware-installation-container,
 .consultation-container {
-    border: solid;
+    width: auto;
     color: black;
     border-color: black;
     border-radius: 25px;
-    padding: 20px;
-    margin: 20px;
+    padding: auto;
+    margin: 30px;
     text-align: center;
     animation: fadeIn 2s;
     -webkit-animation: fadeIn 2s;
+}
+
+
+@media only screen and (max-width: 650px) {
+    .services-container {
+        overflow: auto;
+        position: absolute;
+        top: calc(100vh - (100vh - 35em));
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .services-container {
+        overflow: auto;
+        position: absolute;
+        top: calc(100vh - (100vh - 40em)) !important;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 @keyframes fadeIn {
