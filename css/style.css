@@ -1,12 +1,10 @@
-/* Entities */
+/* ---------------- Entities ----------------*/
 button {
     cursor: pointer;
 }
 
 body {
-    max-height: calc(100vh - 150px);
     height: 100%;
-    /* position: absolute; */
 }
 
 html {
@@ -22,53 +20,44 @@ html {
     max-width: 100vw;
     width: 100%;
     background-color: black;
-    z-index: 900;
+    z-index: 950;
+}
+
+#hamburger-div {
+    border-color: white;
+    background-color: white;
 }
 
 #hamburger-icon {
     background-color: white;
+    width: 5em;
+    height: 4.5em;
 }
 
 
-/* Classes */
-.header-title {
-    color: white;
-}
-/* --------------------------- */
+
+
+
+
+/* ---------------- Classes ---------------- */
+
 .website-query,
 .software-query,
 .consultation-query {
-<<<<<<< Updated upstream
-    max-width: 250px;
-    padding: 30px;
-    width: auto;
-=======
     max-width: 300px;
-    /*padding: 30px;
-    */width: auto;
->>>>>>> Stashed changes
+    /* padding: 30px; */
+    width: auto;
     color: black;
     text-align: center;
-    animation: fadeIn 1.5s;
-    -webkit-animation: fadeIn 1.5s;
 }
 
 .quries {
     text-align: center;
     position: absolute;
-<<<<<<< Updated upstream
-    top: 20%;
-=======
     top: 30%;
     left: 52%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    animation: fadeIn 1.5s;
-    -webkit-animation: fadeIn 1.5s;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
 }
 
 .about-us-home {
@@ -76,47 +65,44 @@ html {
     text-align: center;
     position: absolute;
     top: 65%;
->>>>>>> Stashed changes
     left: 50%;
     margin-right: -50%;
+    padding-bottom: 50px;
+    padding-top: 0;
     transform: translate(-50%, -50%);
-    animation: fadeIn 1.5s;
-    -webkit-animation: fadeIn 1.5s;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
 }
 
-.query-button {
-    color: white;
-    background-color: red;
-    border-radius: 20px;
-    padding: 10px;
+.home-icon {
+    width: 70px;
+    height: 70px;
 }
 
-/* --------------------------- */
+.header-company-name {
+    max-height: 50px;
+}
 
+.dropdown-list {
+    background-color: black !important;
+}
+
+.active { color: red !important; }
+.non-active { color: white !important; }
 
 .footer {
-    position: fixed;
     max-width: 100vw;
     width: 100%;
+    height: 65px;
+    padding-top: 5px;
     background-color: black;
     color: white;
-
+    position: fixed;
     text-align: center;
     bottom: 0;
     vertical-align: bottom;
+    z-index: 950;
 }
 
-<<<<<<< Updated upstream
-/* Media Queries */
-=======
-@keyframes fadeIn {
-  0% { opacity: 0;}
-  100% { opacity: 1;}
-}
+
 
 
 
@@ -295,7 +281,6 @@ body {
         left: 52%;
         margin-right: -50%;
         transform: translate(-50%, -10%);
-        
     }
 
     .about-us-home {
@@ -316,4 +301,3 @@ body {
         text-align: center;
     }
 }
->>>>>>> Stashed changes
