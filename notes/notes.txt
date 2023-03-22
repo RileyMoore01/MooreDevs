@@ -4,3 +4,8 @@ Services:
     3.) Hardware installation / fixes
     4.) Consulation calls
         - Anything over 15min = $30
+
+To Do
+    1.) Custom DNS name
+    2.) IOS formating
+    3.) Refactor the services page 
