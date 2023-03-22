@@ -10,6 +10,8 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
 }
 
 .container-content {
@@ -30,6 +32,12 @@
     text-align: center;
     border-radius: 25px;
     border: solid;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
 }
 
 #email-subject {
@@ -38,6 +46,12 @@
     text-align: center;
     width: 40em; 
     height: 20em;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
 }
 
 
@@ -47,6 +61,12 @@
         width: 20rem;
         border-radius: 25px;
         border: solid;
+        animation: fadeIn 1.5s;
+        -webkit-animation: fadeIn 1.5s;
+        -webkit-border-radius:25px;
+        -moz-border-radius:25px;
+        -ms-border-radius:25px;
+        -o-border-radius:25px;
     }
 
     #input-email {
@@ -55,6 +75,12 @@
         text-align: center;
         border-radius: 25px;
         border: solid;
+        animation: fadeIn 1.5s;
+        -webkit-animation: fadeIn 1.5s;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
     }
 
     #input-subject {
@@ -63,14 +89,25 @@
         text-align: center;
         border-radius: 25px;
         border: solid;
+        animation: fadeIn 1.5s;
+        -webkit-animation: fadeIn 1.5s;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
     }
     
     #email-subject {
         border-radius: 25px;
         border: solid;
-        
         width: 25em; 
         height: 20em;
+        animation: fadeIn 1.5s;
+        -webkit-animation: fadeIn 1.5s;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
     }
 }
 
@@ -88,6 +125,16 @@
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
+        animation: fadeIn 2s;
+        -webkit-animation: fadeIn 2s;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
     }
 }
 
@@ -104,5 +151,20 @@
         left: 40%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
+        animation: fadeIn 2s;
+        -webkit-animation: fadeIn 2s;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
     }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
 }
