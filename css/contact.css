@@ -162,6 +162,10 @@
         -ms-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
     }
+
+    #input-email, #input-subject {
+        width: 18rem;
+    }
 }
 
 @keyframes fadeIn {
