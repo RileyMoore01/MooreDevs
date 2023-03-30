@@ -37,12 +37,33 @@
     </div>
 </nav>
 
-<body>
-    <div class="riley-portfolio">
-        <a href="https://rileymoore01.github.io">Riley Moore's Personal Portfolio Website</a>
 
-        <a href="https://github.com/RileyMoore01/Portfolio">Riley Moore's Personal Portfolio Repository</a>
+<body id="myBody">
+ 
+  <div class="portfolios" id="portfolio" uk-grid>
+
+    <div class="riley-portfolio">
+
+        <h3>Riley Moore</h3>
+        <p style="border: solid; border-radius: 25px; padding: 20px;">Riley's Info</p>
+        <form method="get" action="https://github.com/RileyMoore01/Portfolio" >
+            <input type="hidden" id="input-subject" name="Portfolio" value="R-portfolio" />
+            <button href="https://github.com/RileyMoore01/Portfolio" onclick="requestQuote('website')" style="border-radius: 25px;" class="uk-button uk-button-danger">Riley's Portfolio</button>      
+          </form>
     </div>
+
+    <div class="seth-portfolio">
+        <h3>Seth Kachevas</h3>
+        <p style="border: solid; border-radius: 25px; padding: 20px;">Seth's info</p>
+        <form method="get" action="https://github.com/SethKachevas/Portfolio">
+            <input type="hidden" id="input-subject" name="Portfolio" value="S-portfolio" />
+            <button href="https://github.com/SethKachevas/Portfolio" onclick="requestQuote('hardware')" style="border-radius: 25px;" class="uk-button uk-button-danger">Seth's Portfolio</button>
+        </form>
+    </div>
+
+  </div>
+
+    
 </body>
 
 <footer class="footer">
