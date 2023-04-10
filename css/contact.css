@@ -1,15 +1,11 @@
 .contact-container {
+    padding-top: 100px;
     border-radius: 25px;
-    padding: 2em;
     background-color: white;
     text-align: center;
 
     animation: fadeIn 2s;
     -webkit-animation: fadeIn 2s;
-}
-
-.container-content {
-    padding: 2rem;
 }
 
 #input-email {
@@ -107,10 +103,6 @@
 
 @media only screen and (max-height: 850px) {
     .contact-container {
-        overflow: none !important;
-        /* max-height: calc(100vh - 100px);
-        max-width: 100vw - 100px;
-        width: 100%; */
         border-radius: 25px;
         background-color: white;
         text-align: center;
@@ -120,7 +112,6 @@
 @media only screen and (max-width: 500px) {
     .contact-container {
         border-radius: 25px;
-        padding: 2em;
         background-color: white;
         text-align: center;
     }
