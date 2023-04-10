@@ -90,6 +90,7 @@ html {
 }
 
 .center {
+  text-align: center;
   max-height: 25em;
   max-width: 25em;
   display: block;
@@ -270,6 +271,7 @@ body {
 /* ---------------- Media Queries  ----------------*/
 @media only screen and (max-width: 920px) {
     .quries {
+        margin-left: 25px;
         text-align: center;
         justify-content: center;
         padding-top: 5em;
@@ -295,11 +297,11 @@ body {
     }
 
     .center {
-      padding-left: 2.5rem;
+      /* padding-left: 4.5rem; */
     }
   }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 520px) {
   .center {
     padding-left: 0rem;
   }
