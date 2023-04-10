@@ -1,10 +1,11 @@
 .services-container {
     overflow: auto;
-    position: absolute;
+    padding-top: 5rem;
+    /* position: absolute;
     top: calc(100vh - (100vh - 30rem));
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 }
 
 .website-architecture-container,

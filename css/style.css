@@ -280,7 +280,7 @@ body {
       width: 100%;
       text-align: center;
       justify-content: center;
-      padding-left: calc(100vw / 3.5);
+      padding-left: calc(100vw / 4);
     }
 
     .website-query,
@@ -301,6 +301,6 @@ body {
 
 @media only screen and (max-width: 620px) {
   .center {
-    padding-left: 1.5rem;
+    padding-left: 0rem;
   }
 }
