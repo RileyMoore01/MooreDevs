@@ -108,27 +108,12 @@
 @media only screen and (max-height: 850px) {
     .contact-container {
         overflow: none !important;
-        max-height: calc(100vh - 100px);
+        /* max-height: calc(100vh - 100px);
         max-width: 100vw - 100px;
-        width: 100%;
+        width: 100%; */
         border-radius: 25px;
         background-color: white;
         text-align: center;
-        position: absolute;
-        top: 48%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-        animation: fadeIn 2s;
-        -webkit-animation: fadeIn 2s;
-        -webkit-border-radius: 25px;
-        -moz-border-radius: 25px;
-        -ms-border-radius: 25px;
-        -o-border-radius: 25px;
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
     }
 }
 
@@ -138,19 +123,6 @@
         padding: 2em;
         background-color: white;
         text-align: center;
-    
-        /* display center */
-        transform: translate(-50%, -50%);
-        animation: fadeIn 2s;
-        -webkit-animation: fadeIn 2s;
-        -webkit-border-radius: 25px;
-        -moz-border-radius: 25px;
-        -ms-border-radius: 25px;
-        -o-border-radius: 25px;
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
     }
 
     #input-email, #input-subject {
