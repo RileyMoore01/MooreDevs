@@ -10,6 +10,7 @@ body {
 html {
     max-height: 100vh;
     height: 100%;
+    overflow: auto;
 }
 
  /* ID's */
@@ -45,7 +46,6 @@ html {
 .software-query,
 .consultation-query {
     max-width: 300px;
-    /* padding: 30px; */
     width: auto;
     color: black;
     text-align: center;
@@ -53,23 +53,16 @@ html {
 
 .quries {
     text-align: center;
-    position: absolute;
-    top: 30%;
-    left: 52%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    justify-content: center;
+    padding-top: 5em;
 }
 
 .about-us-home {
-    max-width: calc(100vw / 2);
+    max-width: 70%;
+    width: 100%;
     text-align: center;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    margin-right: -50%;
-    padding-bottom: 50px;
-    padding-top: 0;
-    transform: translate(-50%, -50%);
+    justify-content: center;
+    padding-left: calc(100vw / 3.5);
 }
 
 .home-icon {
@@ -89,17 +82,20 @@ html {
 .non-active { color: white !important; }
 
 .footer {
-    max-width: 100vw;
-    width: 100%;
-    height: 65px;
-    padding-top: 5px;
     background-color: black;
     color: white;
-    position: fixed;
+    padding-bottom: 10px;
     text-align: center;
-    bottom: 0;
     vertical-align: bottom;
-    z-index: 950;
+}
+
+.center {
+  max-height: 25em;
+  max-width: 25em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 
@@ -273,21 +269,17 @@ body {
 /* ---------------- Media Queries  ----------------*/
 @media only screen and (max-width: 920px) {
     .quries {
-        margin: auto;
-        padding-bottom: 150px;
-        overflow: auto;
-        position: absolute;
-        max-width: calc(100vw - 100px);
-        left: 52%;
-        margin-right: -50%;
-        transform: translate(-50%, -10%);
+        text-align: center;
+        justify-content: center;
+        padding-top: 5em;
     }
 
     .about-us-home {
-        text-align: center;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 330%);
+      max-width: 70%;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      padding-left: calc(100vw / 3.5);
     }
 
     .website-query,
