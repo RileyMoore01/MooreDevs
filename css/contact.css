@@ -140,10 +140,6 @@
         text-align: center;
     
         /* display center */
-        position: absolute;
-        left: 40%;
-        top: 50%;
-        margin-right: -50%;
         transform: translate(-50%, -50%);
         animation: fadeIn 2s;
         -webkit-animation: fadeIn 2s;
