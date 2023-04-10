@@ -271,7 +271,7 @@ body {
 /* ---------------- Media Queries  ----------------*/
 @media only screen and (max-width: 920px) {
     .quries {
-        margin-left: 10px;
+        margin-left: 5px;
         text-align: center;
         justify-content: center;
         padding-top: 5em;
