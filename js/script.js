@@ -29,3 +29,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
+
+// Portfolio Filtering Logic
+const filterContainer = document.querySelector('#portfolio-filters');
+if (filterContainer) {
+    const filterBtns = filterContainer.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Set active class on button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            portfolioItems.forEach(item => {
+                const itemCategories = item.getAttribute('data-category').split(' ');
+                
+                if (filterValue === 'all' || itemCategories.includes(filterValue)) {
+                    item.classList.remove('hide');
+                } else {
+                    item.classList.add('hide');
+                }
+            });
+        });
+    });
+}

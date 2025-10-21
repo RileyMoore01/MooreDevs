@@ -1,0 +1,31 @@
+# Turn on the rewrite engine
+RewriteEngine On
+
+# Remove .html extension from files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+
+### How to Implement This:
+
+**Step 1: Upload the `.htaccess` File**
+
+Place the new `.htaccess` file in your `public_html` directory on Hostinger. It should be in the same folder as your `index.html`, `about.html`, etc.
+
+**Step 2: Update All Your HTML Links**
+
+You now need to go through all your HTML files (`index.html`, `services.html`, `portfolio.html`, `about.html`, and `contact.html`) and remove the `.html` extension from every link in the navigation and footer.
+
+For example, in your `header`, you will change this:
+
+```html
+<!-- OLD LINKS -->
+<ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
