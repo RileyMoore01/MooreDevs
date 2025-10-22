@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device‑width, initial‑scale=1.0">
-  <title>Eddie’s BBQ • Texas‑Style Barbecue Joint</title>
-  <link href="/eddiesBBQ/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eddie’s BBQ • Texas-Style Barbecue Joint</title>
+    <!-- Google Fonts: Oswald (Headings) & Roboto (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <!-- add hero section here -->
-  
-    <section id="menu" class="menu section">
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
         <div class="container">
-          <h2>Our Menu</h2>
+            <a href="#" class="logo">Eddie's BBQ</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#contact" class="btn btn-outline">Book an Event</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>A Texas-style Joint</h1>
+            <p>Join us for Lunch, or let us Cater or Host your event!</p>
+            <a href="#menu" class="btn btn-primary">View Full Menu</a>
+        </div>
+    </section>
+    
+    <!-- Menu Section -->
+    <section id="menu" class="section">
+        <div class="container">
+            <h2>Our Menu</h2>
             <div class="menu-category">
                 <h3>Joint Signatures</h3>
                 <div class="menu-grid">
@@ -39,31 +69,76 @@
             </div>
         </div>
     </section>
-      
-    <section id="about-us" class="menu section">
+        
+    <!-- About/Catering Section -->
+    <section id="about" class="section section-light">
         <div class="container">
-            <h2>About Us</h2>
+            <h2>About & Catering</h2>
             <div class="menu-category">
                 <h3>We like to party... and Smoke Meat too...</h3>
-                <p>Whether you're planning a company event, wedding reception, or family gathering, Eddie's BBQ offers the perfect venue and catering solutions for your needs.</p>
+                <p class="section-intro">Whether you're planning a company event, wedding reception, or family gathering, Eddie's BBQ offers the perfect venue and catering solutions for your needs.</p>
                 <div class="menu-grid">
                     <div class="menu-card">
                         <h4>Venue Rental</h4>
+                        <p class="description">Rent our rustic, private event space for your next party.</p>
                         <p class="price">$125/hr</p>
                     </div>
                     <div class="menu-card">
                         <h4>Catering Packages</h4>
                         <p class="description">*** 2 Meat Package (20-30 people) - $25/head ***</p>
                         <p class="description">*** 3 Meat Package (40-50 people) - $35/head ***</p>
-                        <p class="description">*** Deluxe 4 Meat/ Unlimited Sides Package (Up to 100 people) - Contact Us for Pricing ***</p>
+                        <p class="description">*** Deluxe 4 Meat/ Unlimited Sides (Up to 100) - Contact Us ***</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-  <!-- add location here  -->
+    <!-- Location Section -->
+    <section id="location" class="section">
+        <div class="container">
+            <h2>Find Us</h2>
+            <p class="section-intro">Come on by and say hi. We've got a plate waiting for you.</p>
+            <div class="location-grid">
+                <div class="location-details">
+                    <h3>Eddie's BBQ Joint</h3>
+                    <p><i class="fas fa-map-marker-alt"></i>1324 E. 50th St.<br>Lubbock, TX 79404</p>
+                    <p><i class="fas fa-phone"></i> (806)-747-3736</p>
+                    <p><i class="fas fa-inbox"></i>eddiedelavan@yahoo.com</p>
+                    
+                    <h4>Hours</h4>
+                    <p><strong>Tues - Fri:</strong> 10:30am - 2pm</p>
+                </div>
+                <div class="location-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110204.60195514125!2d-97.822760086259!3d30.307982239440628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b599a0cc032f%3A0x5d9b464bd469d57a!2sAustin%2C%20TX!5e0!3m2!1sen!2sus!4v1678886568123!5m2!1sen!2sus" 
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- add contact me section here -->
+    <!-- Contact Section -->
+    <section id="contact" class="section section-dark">
+        <div class="container">
+            <h2>Book Your Event</h2>
+            <p class="section-intro">Got a big group? Planning a party? Let us handle the food.</p>
+            <a href="mailto:catering@eddiesbbq.com" class="btn btn-primary">Email Us for Catering</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Eddie's BBQ. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
