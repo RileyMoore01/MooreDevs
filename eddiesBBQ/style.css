@@ -186,7 +186,7 @@ p {
 .hero {
     min-height: 80vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('https://placehold.co/1920x1080/453020/FBF9F4?text=Eddie\'s+BBQ+Hero') center center/cover;
+                url('/eddiesBBQ/images/storefront.jpg') center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
