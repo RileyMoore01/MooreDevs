@@ -1,0 +1,86 @@
+/* Modern Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+  }
+  
+  /* Headings */
+  h2 {
+    font-size: 2.5rem;
+    color: #900;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+    color: #b00;
+  }
+  
+  /* Menu Grid & Cards */
+  .menu-category {
+    margin-bottom: 40px;
+  }
+  
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .menu-card {
+    background-color: #fefefe;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease;
+  }
+  
+  .menu-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .menu-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #900;
+  }
+  
+  .menu-card .description {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  
+  .menu-card .price {
+    font-weight: bold;
+    color: #b00;
+    font-size: 1rem;
+  }
+  
+  /* Section styling */
+  .section {
+    padding: 60px 0;
+  }
+  
+  .section:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
