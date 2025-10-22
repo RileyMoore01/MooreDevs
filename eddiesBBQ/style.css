@@ -1,4 +1,3 @@
-/* Modern Reset */
 * {
     margin: 0;
     padding: 0;
@@ -75,7 +74,6 @@
     font-size: 1rem;
   }
   
-  /* Section styling */
   .section {
     padding: 60px 0;
   }
