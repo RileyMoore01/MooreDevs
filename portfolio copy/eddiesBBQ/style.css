@@ -187,7 +187,7 @@ p {
 .hero {
     min-height: 80vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('/images/storefront.jpg') center center/cover;
+                url('/portfolio/eddiesBBQ/images/storefront.jpg') center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
