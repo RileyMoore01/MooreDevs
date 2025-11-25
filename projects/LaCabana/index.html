@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Cabana - Authentic Mexican Cuisine in Lubbock, Texas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terracotta: #D2691E;
+            --deep-red: #8B1E3F;
+            --warm-orange: #E8630A;
+            --golden: #FFA500;
+            --cream: #FFF8E7;
+            --adobe: #F4E4C1;
+            --dark-brown: #3E2723;
+            --forest-green: #2D5016;
+            --tile-blue: #1E5F74;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark-brown);
+            overflow-x: hidden;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, var(--deep-red) 0%, var(--terracotta) 50%, var(--warm-orange) 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 10px,
+                    rgba(255, 255, 255, 0.03) 10px,
+                    rgba(255, 255, 255, 0.03) 20px
+                );
+            animation: pattern-slide 20s linear infinite;
+        }
+
+        @keyframes pattern-slide {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(20px) translateY(20px); }
+        }
+
+        .decorative-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 15s ease-in-out infinite;
+        }
+
+        .circle-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--golden);
+            top: -100px;
+            left: -100px;
+        }
+
+        .circle-2 {
+            width: 300px;
+            height: 300px;
+            background: var(--forest-green);
+            bottom: -50px;
+            right: -50px;
+            animation-delay: -5s;
+        }
+
+        .circle-3 {
+            width: 200px;
+            height: 200px;
+            background: var(--tile-blue);
+            top: 50%;
+            right: 10%;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            animation: fade-in-up 1s ease-out;
+        }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo-text {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(4rem, 12vw, 10rem);
+            letter-spacing: 0.1em;
+            text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+            margin-bottom: 0.5rem;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3),
+                           0 0 20px rgba(255, 255, 255, 0.2);
+            }
+            to {
+                text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3),
+                           0 0 40px rgba(255, 255, 255, 0.4);
+            }
+        }
+
+        .tagline {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(1rem, 3vw, 1.8rem);
+            font-style: italic;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fade-in 1s ease-out 0.5s forwards;
+        }
+
+        @keyframes fade-in {
+            to { opacity: 1; }
+        }
+
+        .hero-info {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            opacity: 0;
+            animation: fade-in 1s ease-out 1s forwards;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .info-icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .scroll-arrow {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--dark-brown);
+            padding: 1rem 2rem;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--golden);
+            text-decoration: none;
+            letter-spacing: 0.1em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--golden);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--golden);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            text-align: center;
+            color: var(--deep-red);
+            margin-bottom: 3rem;
+            letter-spacing: 0.05em;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--warm-orange), var(--golden));
+        }
+
+        .about-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            color: var(--warm-orange);
+            font-weight: 600;
+        }
+
+        .specialty-box {
+            background: linear-gradient(135deg, var(--adobe), var(--cream));
+            padding: 2rem;
+            border-left: 5px solid var(--terracotta);
+            border-radius: 0 15px 15px 0;
+            box-shadow: 8px 8px 0 rgba(139, 30, 63, 0.1);
+        }
+
+        .specialty-box h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--deep-red);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .specialty-list {
+            list-style: none;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .specialty-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1rem;
+            padding: 0.8rem;
+            background: white;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .specialty-item:hover {
+            transform: translateX(10px);
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .specialty-icon {
+            width: 30px;
+            height: 30px;
+            min-width: 30px;
+            background: var(--warm-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .menu-section {
+            background: linear-gradient(180deg, var(--cream) 0%, var(--adobe) 100%);
+        }
+
+        .menu-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-category {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, var(--warm-orange), var(--golden));
+        }
+
+        .menu-category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu-category h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--deep-red);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .menu-items {
+            list-style: none;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px dashed var(--adobe);
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-name {
+            font-weight: 600;
+            color: var(--dark-brown);
+        }
+
+        .item-price {
+            color: var(--warm-orange);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .location-section {
+            background: var(--dark-brown);
+            color: var(--cream);
+        }
+
+        .location-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            background: var(--warm-orange);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+        }
+
+        .contact-icon svg {
+            width: 100%;
+            height: 100%;
+            fill: white;
+        }
+
+        .contact-details h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: var(--golden);
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .contact-details p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .contact-details a {
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-details a:hover {
+            color: var(--golden);
+        }
+
+        .map-container {
+            background: var(--adobe);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+            color: var(--dark-brown);
+        }
+
+        footer {
+            background: var(--deep-red);
+            color: var(--cream);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: center;
+            }
+
+            .about-section,
+            .location-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--warm-orange);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 12px rgba(232, 99, 10, 0.3);
+            transition: all 0.3s ease;
+            margin-top: 1.5rem;
+        }
+
+        .cta-button:hover {
+            background: var(--golden);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="decorative-circle circle-1"></div>
+        <div class="decorative-circle circle-2"></div>
+        <div class="decorative-circle circle-3"></div>
+        
+        <div class="hero-content">
+            <h1 class="logo-text">LA CABANA</h1>
+            <p class="tagline">Authentic Mexican Cuisine from Guanajuato</p>
+            
+            <div class="hero-info">
+                <div class="info-item">
+                    <svg class="info-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <span>1105 E 50th St, Lubbock, TX</span>
+                </div>
+                <div class="info-item">
+                    <svg class="info-icon" viewBox="0 0 24 24">
+                        <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/>
+                    </svg>
+                    <span>(806) 620-0410</span>
+                </div>
+            </div>
+            
+            <a href="#contact" class="cta-button">Visit Us Today</a>
+        </div>
+        
+        <div class="scroll-indicator">
+            <svg class="scroll-arrow" viewBox="0 0 24 24">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+            </svg>
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav-content">
+            <a href="#" class="nav-logo">LA CABANA</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about">
+        <h2 class="section-title">Our Story</h2>
+        <div class="about-section">
+            <div class="about-content">
+                <p>Welcome to <span class="highlight">La Cabana</span>, where the authentic flavors of Guanajuato come alive in the heart of Lubbock, Texas. For years, we've been serving our community with <span class="highlight">homemade corn tortillas</span>, fresh salsas, and traditional Mexican recipes that have been passed down through generations.</p>
+                
+                <p>Our commitment to authenticity means we prepare everything <span class="highlight">from scratch daily</span>. From our perfectly seasoned carne guisada to our tender barbacoa, every dish reflects the true taste of Mexican home cooking.</p>
+                
+                <p>Step into our warm, family-friendly atmosphere where <span class="highlight">Tejano music</span> sets the mood and our attentive staff treats you like family. Whether you're joining us for breakfast or dinner, you'll experience the kind of hospitality that keeps our community coming back.</p>
+            </div>
+            
+            <div class="specialty-box">
+                <h3>What Makes Us Special</h3>
+                <ul class="specialty-list">
+                    <li class="specialty-item">
+                        <div class="specialty-icon">★</div>
+                        <span>Homemade corn tortillas made fresh daily</span>
+                    </li>
+                    <li class="specialty-item">
+                        <div class="specialty-icon">★</div>
+                        <span>Authentic salsas that are perfectly spiced</span>
+                    </li>
+                    <li class="specialty-item">
+                        <div class="specialty-icon">★</div>
+                        <span>Traditional recipes from Guanajuato</span>
+                    </li>
+                    <li class="specialty-item">
+                        <div class="specialty-icon">★</div>
+                        <span>Everything made from scratch</span>
+                    </li>
+                    <li class="specialty-item">
+                        <div class="specialty-icon">★</div>
+                        <span>Generous portions at great prices</span>
+                    </li>
+                    <li class="specialty-item">
+                        <div class="specialty-icon">★</div>
+                        <span>Warm, family-oriented atmosphere</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2 class="section-title">Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-category">
+                <h3>Cabana Plates</h3>
+                <ul class="menu-items">
+                    <li class="menu-item">
+                        <span class="item-name">Fajitas</span>
+                        <span class="item-price">$8.59</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Enchiladas</span>
+                        <span class="item-price">$8.59</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Carne Guisada</span>
+                        <span class="item-price">$8.59</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Gorditas</span>
+                        <span class="item-price">$8.59</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Barbacoa Plate</span>
+                        <span class="item-price">$8.59</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Taco Plate</span>
+                        <span class="item-price">$8.59</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Carne Asada</span>
+                        <span class="item-price">$8.59</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Burrito Supreme</span>
+                        <span class="item-price">$8.59</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-category">
+                <h3>Specialties</h3>
+                <ul class="menu-items">
+                    <li class="menu-item">
+                        <span class="item-name">Pollo Mexicano</span>
+                        <span class="item-price">$8.59</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Pollo Chorizo</span>
+                        <span class="item-price">$8.59</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Pollo Hawaiano</span>
+                        <span class="item-price">$8.59</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Pollo Oaxaca</span>
+                        <span class="item-price">$8.59</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Chiles Rellenos</span>
+                        <span class="item-price">$8.59</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Taco Salad Fajita</span>
+                        <span class="item-price">$8.59</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Nachos Fajita</span>
+                        <span class="item-price">$8.59</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Nacho Combo</span>
+                        <span class="item-price">$8.59</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-category">
+                <h3>Seafood</h3>
+                <ul class="menu-items">
+                    <li class="menu-item">
+                        <span class="item-name">Shrimp Cocktail</span>
+                        <span class="item-price">$8.99</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Camarones Rancheros</span>
+                        <span class="item-price">$8.99</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-category">
+                <h3>Breakfast</h3>
+                <ul class="menu-items">
+                    <li class="menu-item">
+                        <span class="item-name">Breakfast Tacos</span>
+                        <span class="item-price">$6.25</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">The Pancake Plate</span>
+                        <span class="item-price">$6.25</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Breakfast Plates</span>
+                        <span class="item-price">$6.25</span>
+                    </li>
+                </ul>
+                <p style="margin-top: 1rem; font-style: italic; color: var(--deep-red); font-size: 0.9rem;">All breakfast items just $6.25!</p>
+            </div>
+
+            <div class="menu-category">
+                <h3>À La Carte</h3>
+                <ul class="menu-items">
+                    <li class="menu-item">
+                        <span class="item-name">Tacos</span>
+                        <span class="item-price">Market</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Tortas</span>
+                        <span class="item-price">Market</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Quesadillas</span>
+                        <span class="item-price">Market</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-category">
+                <h3>Sides & More</h3>
+                <ul class="menu-items">
+                    <li class="menu-item">
+                        <span class="item-name">Chips and Salsa</span>
+                        <span class="item-price">Market</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="item-name">Homemade Tortillas</span>
+                        <span class="item-price">Market</span>
+                    </li>
+                </ul>
+                <p style="margin-top: 1rem; font-style: italic; color: var(--deep-red); font-size: 0.9rem;">Ask about our daily specials!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="location-section">
+        <h2 class="section-title" style="color: var(--golden);">Visit Us</h2>
+        <div class="location-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Address</h4>
+                        <p>1105 E 50th St<br>Lubbock, TX 79404</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Phone</h4>
+                        <p><a href="tel:8066200410">(806) 620-0410</a></p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.9;">Call ahead to confirm hours</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Features</h4>
+                        <p>✓ Wheelchair Accessible<br>
+                           ✓ Outdoor Seating Available<br>
+                           ✓ Credit Cards Accepted<br>
+                           ✓ Perfect for Groups & Families</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <p>Located conveniently near US Foods on E 50th Street</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 La Cabana Mexican Restaurant. Serving Authentic Mexican Cuisine in Lubbock, Texas.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">Website by Moore Devs</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe menu categories and other elements
+        document.querySelectorAll('.menu-category, .specialty-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
